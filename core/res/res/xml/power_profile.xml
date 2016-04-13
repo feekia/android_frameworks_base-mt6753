@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+**
+** Copyright 2009, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License")
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<device name="Android">
+  <!-- All values are in mAh except as noted -->
+  <item name="none">0</item>
+  <item name="screen.on">199.71</item>
+  <item name="bluetooth.active">16.96</item>
+  <item name="bluetooth.on">3.1</item>
+  <item name="screen.full">357.67</item>
+  <item name="wifi.on">2.85</item>
+  <item name="wifi.active">110.84</item>
+  <item name="wifi.scan">3.92</item>
+  <item name="dsp.audio">32.04</item>
+  <item name="dsp.video">48.66</item>
+  <item name="radio.active">86.91</item>
+  <!-- The current consumed by the radio when it is scanning for a signal -->
+  <item name="radio.scanning">5</item>
+  <item name="gps.on">50</item> <!-- ** copied from samsung/crespo -->
+  <!-- Current consumed by the radio at different signal strengths, when paging -->
+  <array name="radio.on"> <!-- Strength 0 to BINS-1 -->
+      <value>4.08</value>
+      <value>4.08</value>
+  </array>
+  <!-- Different CPU speeds as reported in
+       /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state -->
+  <array name="cpu.speeds">
+      <value>400000</value> <!-- 400 MHz CPU speed -->
+  </array>
+  <!-- Power consumption when CPU is idle -->
+  <item name="cpu.idle">2.4</item>
+  <!-- Power consumption at different speeds -->
+  <array name="cpu.active">
+      <value>259.0</value> <!-- ** copied from samsung/crespo -->
+  </array>
+  <!-- This is the battery capacity in mAh -->
+  <item name="battery.capacity">2400</item>
+  <!-- new fields -->
+  <item name="bluetooth.at">2.18</item>
+  <item name="wifi.browse.active">246.38</item>
+  <item name="bluetooth.a2dp.active">20.52</item>
+  <array name="screen.brightness">
+      <value>199.71</value> <!-- 0% brightness -->
+      <value>229.63</value> <!-- 20% brightness -->
+      <value>263.55</value> <!-- 40% brightness -->
+      <value>293.9</value> <!-- 60% brightness -->
+      <value>325.82</value> <!-- 80% brightness -->
+      <value>357.67</value> <!-- 100% brightness -->
+  </array>
+  <item name="radio.3g.active">186.31</item>
+  <!-- Current consumed by 3G radio while browsing -->
+  <item name="radio.3g.data">279.05</item>
+  <!-- Current consumed by 3G radio at different signal strengths, when paging -->
+  <array name="radio.3g.on"> <!-- Strength 0 to BINS-1 -->
+      <value>4.78</value>
+      <value>4.78</value>
+  </array>
+  <!-- Current consumed by 4G radio while calling -->
+  <item name="radio.4g.active">285.6</item>
+  <!-- Current consumed by 4G radio while browsing -->
+  <item name="radio.4g.data">308.71</item>
+  <!-- Current consumed by 4G radio at different signal strengths, when paging -->
+  <array name="radio.4g.on"> <!-- Strength 0 to BINS-1 -->
+      <value>5.9</value>
+      <value>5.9</value>
+  </array>
+  <array name="audio.speaker">
+      <value>5.39</value> <!-- 0% volume -->
+      <value>14.55</value> <!-- 100% volume -->
+  </array>
+</device>

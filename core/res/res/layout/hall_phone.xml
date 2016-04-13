@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:layout_margin="48dp"
+    android:orientation="vertical"
+    >
+    
+    <TextView
+        android:id="@+id/hall_operator"
+        android:layout_marginTop="24dp"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:gravity="center"
+        android:textSize="16dp"
+        />
+
+    <TextView
+	    android:layout_marginTop="8dp"
+        android:textColor="@android:color/white"
+        android:id="@+id/hall_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:gravity="center"
+        android:textSize="48dp"
+        />
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"
+        android:id="@+id/hall_hint"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textSize="16dp"
+        android:text="@string/hall_dialing" />
+    
+    <ImageView
+        android:layout_marginTop="24dp"
+        android:id="@+id/hall_call_end"
+        android:gravity="center"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_hall_fab_red"
+        android:scaleType="center"
+        android:src="@drawable/ic_hall_call_end"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="24dp"
+        android:id="@+id/hall_incoming_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        android:layout_marginLeft="40dp"
+        >
+
+        <TextView
+		    android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:clickable="true"
+            android:id="@+id/hall_dismiss"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:gravity="left"
+            android:drawableLeft="@drawable/ic_hall_call_end"
+            android:drawablePadding="8dp"
+            android:text="@string/hall_dismiss" />
+
+        <TextView
+		    android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_hall_call"
+            android:id="@+id/hall_answer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:drawablePadding="8dp"
+            android:gravity="left"
+            android:layout_marginLeft="8dp"
+            android:text="@string/hall_answer" />
+    </LinearLayout>
+
+</LinearLayout>

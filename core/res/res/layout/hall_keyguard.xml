@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal" 
+    android:background="@android:color/black">
+
+    <com.android.internal.policy.impl.hall.Workspace android:layout_width="match_parent"
+		android:id="@+id/hall_keyguard_workspace" android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp" android:layout_marginRight="40dp" android:layout_marginTop="48dp"
+		android:layout_height="240dp" android:layout_alignParentTop="true">	
+		<!-- android:layout_height="168dp"  android:layout_marginTop="5dp" -->	
+        <com.android.internal.policy.impl.hall.HallKeyguardNormalView android:clickable="true"
+			android:layout_width="match_parent" android:layout_height="match_parent" />
+
+        <com.android.internal.policy.impl.hall.HallKeyguardMusicView android:clickable="true"
+			android:layout_width="match_parent" android:layout_height="match_parent" 
+			android:layout_gravity="center_horizontal" android:gravity="center_horizontal" 
+			
+			/>
+    </com.android.internal.policy.impl.hall.Workspace>
+	
+	<include android:id="@+id/hall_keyguard_page_indicator" layout="@layout/hall_keyguard_page_indicator"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal" android:layout_below="@id/hall_keyguard_workspace"
+		android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
